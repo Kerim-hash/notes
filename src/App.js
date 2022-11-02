@@ -43,6 +43,7 @@ function App() {
         });
         setNote(data);
         setValue(data.content);
+        setValue("")
       });
   };
   // delete note by id
@@ -77,9 +78,17 @@ function App() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [+window.location.pathname.replace(/[^0-9]/g, "")]);
+
   // update note by id
   const updateNote = () => {
-    notes.update(note?.id, { content: value });
+    notes.update(note?.id, { content: value })
+    .then((id) => {
+      const data = notes.get({
+        id:id,
+      });
+      setNote(data);
+    });
+    
   };
 
   const changeHandler = (value) => {

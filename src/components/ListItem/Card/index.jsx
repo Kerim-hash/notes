@@ -10,7 +10,7 @@ const CardItem = ({ content, date, id }) => {
     <NavLink to={`/${id}`} className="card">
       <Card size="small" bordered={false}>
         <Title level={4} className="card-title">
-          {content.replace(/<[^>]+>/g, "") === ""? "Новая заметка ": content.replace(/<[^>]+>/g, "")}
+          {content.replace(/<[^>]+>/g, "").trim() === "" ? "Новая заметка ": content.replace(/<[^>]+>/g, "")}
         </Title>
         <Row width={300 }wrap={false} gutter={[5, 0]}>
           <Col flex="none">
@@ -18,7 +18,7 @@ const CardItem = ({ content, date, id }) => {
           </Col>
           <Col flex="auto" className="card-text">
             <Text type="secondary" >
-             {content.replace(/<[^>]+>/g, "") === "" ? "нет дополнительного текста" :content.replace(/<[^>]+>/g, "")}
+             {content.replace(/<[^>]+>/g, "").trim() === "" ? "нет дополнительного текста" :content.replace(/<[^>]+>/g, "")}
             </Text>
           </Col>
         </Row>
