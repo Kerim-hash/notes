@@ -82,11 +82,15 @@ function App() {
   // update note by id
   const updateNote = () => {
     notes.update(note?.id, { content: value })
-    .then((id) => {
-      const data = notes.get({
-        id:id,
-      });
-      setNote(data);
+    .then(({id}) => {
+      const fetchData = async () => {
+        const data = await notes.get({
+          id:id,
+        });
+        setNote(data);
+        setValue(data.content);
+      };
+      fetchData();
     });
     
   };
