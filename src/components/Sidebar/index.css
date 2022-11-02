@@ -1,0 +1,38 @@
+.sidebar {
+  background-color: #d1d1d6 !important;
+  padding: 0;
+}
+
+.btn--trs {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.ant-input-affix-wrapper {
+  background: transparent;
+}
+
+.sidebar-search {
+  background: transparent;
+}
+
+.sidebar-search  {
+  background: transparent !important;
+  border-radius: 10px !important;
+  border: 2px solid #ddd !important;
+}
+.sidebar-search input {
+  background: transparent !important;
+}
+
+.sidebar-icon{
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.sidebar-icon--medium{
+  width: 15px;
+  height: 15px;
+}

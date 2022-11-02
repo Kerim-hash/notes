@@ -1,0 +1,24 @@
+
+.card .ant-card{
+    border-radius: 11px;  
+    border-bottom: 1px solid #ddd;
+}
+.card.active > .ant-card{
+    background-color: #FAE39B;   
+}
+.card-title {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;
+    padding: 0px;
+    margin: 0px;
+}
+.card-text {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* width: 120px; */
+    padding: 0px;
+    margin: 0px;
+}
